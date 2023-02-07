@@ -2,6 +2,8 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  config.hosts << "af8b462f68ee4dfe89e1811df2c262b6.vfs.cloud9.us-east-2.amazonaws.com"
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
@@ -67,4 +69,6 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
